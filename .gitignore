@@ -1,0 +1,29 @@
+# Virtual environment
+ml_env/
+myenv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Artifacts and models
+artifacts/
+*.pkl
+*.joblib
+
+# Data files
+*.csv
+*.xlsx
+
+# Logs
+logs/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

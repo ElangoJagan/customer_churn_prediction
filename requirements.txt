@@ -1,0 +1,21 @@
+# Core Data Science
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
+# Imbalanced Data
+imbalanced-learn
+
+# Gradient Boosting
+xgboost
+
+# Config
+pyyaml
+
+# Serialization
+joblib
+
+# Web Framework
+flask
