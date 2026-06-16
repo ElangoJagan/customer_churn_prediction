@@ -1,8 +1,8 @@
-from src.exception import CustomException
-import sys
+from src.logger import Logger
 
-try:
-    x=1/0
-except Exception as e:
-    raise CustomException(e,sys)
-    
+_logger_obj = Logger('main')
+logger= _logger_obj.get_logger()
+
+logger.info('New updates ')
+logger.error('error updating')
+logger.warning('warning msg')
