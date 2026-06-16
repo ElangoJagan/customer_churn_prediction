@@ -1,15 +1,9 @@
-from src.entity.config_entity import (
-    DataIngestionConfig,
-    DataTransformationConfig,
-    ModelTrainerConfig
-)
+from src.exception import CustomException
+from src.logger import Logger
+from src.components.data_ingestion import DataIngestion
 
-# Create config objects
-ingestion_config = DataIngestionConfig()
-transformation_config = DataTransformationConfig()
-trainer_config = ModelTrainerConfig()
+obj = DataIngestion()
+train_path, test_path = obj.initiate_data_ingestion()
 
-# Print them — @dataclass gives __repr__ automatically!
-print(ingestion_config)
-print(transformation_config)
-print(trainer_config)
+print(train_path)
+print(test_path)

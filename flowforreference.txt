@@ -1,0 +1,30 @@
+main.py
+   │
+   ▼
+DataIngestion()          ← __init__ called
+   │
+   ▼
+DataIngestionConfig()    ← paths stored in self.config
+   │
+   ▼
+initiate_data_ingestion()  ← main method called
+   │
+   ├── load_data(source1_path)      ← demographics
+   ├── load_data(source2_path)      ← usage
+   ├── load_data(source3_path)      ← support
+   │
+   ├── validate_data()              ← check not empty
+   │
+   ├── merge_data()                 ← merge 3 sources
+   │
+   ├── save_data(merged_path)       ← save merged
+   │
+   ├── train_test_split()           ← split 80/20
+   │
+   ├── save_data(train_path)        ← save train
+   ├── save_data(test_path)         ← save test
+   │
+   ▼
+return train_path, test_path       ← back to main.py
+
+=================================================================================================
