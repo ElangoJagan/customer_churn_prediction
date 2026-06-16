@@ -1,8 +1,15 @@
-from src.logger import Logger
+from src.entity.config_entity import (
+    DataIngestionConfig,
+    DataTransformationConfig,
+    ModelTrainerConfig
+)
 
-_logger_obj = Logger('main')
-logger= _logger_obj.get_logger()
+# Create config objects
+ingestion_config = DataIngestionConfig()
+transformation_config = DataTransformationConfig()
+trainer_config = ModelTrainerConfig()
 
-logger.info('New updates ')
-logger.error('error updating')
-logger.warning('warning msg')
+# Print them — @dataclass gives __repr__ automatically!
+print(ingestion_config)
+print(transformation_config)
+print(trainer_config)
