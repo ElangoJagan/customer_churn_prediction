@@ -5,7 +5,7 @@ import joblib
 from typing import Any, Dict
 
 from src.logger import Logger
-from exception import CustomException
+from src.exception import CustomException
 
 _logger_obj = Logger('Utils')
 logger = _logger_obj.get_logger()
@@ -21,10 +21,10 @@ def save_object(file_path, obj):
     """
     try:
         logger.info('Save Object Started')
-        dir_path = os.dirname(file_path)
+        dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path, exist_ok= True)
         
-        logger.info('saving obj to filepath: {file_path}')
+        logger.info(f'saving obj to filepath: {file_path}')
         joblib.dump(obj, file_path)
         logger.info('object saved')
         
