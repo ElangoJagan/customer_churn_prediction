@@ -126,7 +126,7 @@ class ModelTrainer:
                 report[model_name]= metrics
                 trained_models[model_name] =model
                 
-                logger.info(f"{model_name} → {metrics}")
+                logger.info(f"{model_name} -> {metrics}")
             
             #step4 : pick best model based on f1 score
             # (F1 balances precision + recall — good for imbalanced data!)

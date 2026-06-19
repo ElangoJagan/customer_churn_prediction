@@ -11,6 +11,7 @@ from imblearn.over_sampling import SMOTE
 from src.exception import CustomException
 from src.logger import Logger
 from src.entity.config_entity import DataTransformationConfig
+from src.utils import save_object
 
 _logger_obj=Logger('Data_Transformation')
 logger = _logger_obj.get_logger()
@@ -171,8 +172,11 @@ class DataTransformation:
             x_train_transformed = self._preprocessor.fit_transform(x_train)
             x_test_transformed = self._preprocessor.transform(x_test)
             logger.info('Preprocessing done')
+            save_object(self.config.preprocessor_path, self._preprocessor)
+            logger.info('Preprocessor saved')
             
             #Step 4: Apply SMOTE:
+            
             X_train_resampled, y_train_resampled = self.apply_smote(
                 x_train_transformed, y_train.values
             )
