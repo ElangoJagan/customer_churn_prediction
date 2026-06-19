@@ -179,7 +179,7 @@ class DataTransformation:
             
             #Step 5:combine x and  y back
             train_arr = np.c_[X_train_resampled, y_train_resampled]
-            test_arr= np.c_[x_train_transformed, y_train.values]
+            test_arr= np.c_[x_test_transformed, y_test.values]
             
             logger.info("="*50)
             logger.info("Data Transformation Completed!")
