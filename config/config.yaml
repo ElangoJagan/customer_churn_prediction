@@ -1,0 +1,15 @@
+data_ingestion:
+  source1_path: "data/raw/customer_demographics.csv"
+  source2_path: "data/raw/customer_usage.csv"
+  source3_path: "data/raw/customer_support.csv"
+  merged_data_path: "data/processed/merged_data.csv"
+  train_data_path: "data/processed/train.csv"
+  test_data_path: "data/processed/test.csv"
+
+data_transformation:
+  preprocessor_path: "artifacts/preprocessor.pkl"
+  target_column: "churn"
+
+model_trainer:
+  model_path: "artifacts/model.pkl"
+  metrics_path: "artifacts/metrics.json"

@@ -1,0 +1,18 @@
+data_transformation:
+  test_size: 0.2
+  random_state: 42
+
+model_trainer:
+  expected_accuracy: 0.75
+  random_state: 42
+
+  logistic_regression:
+    max_iter: 1000
+
+  random_forest:
+    n_estimators: 100
+    random_state: 42
+
+  xgboost:
+    random_state: 42
+    eval_metric: "logloss"

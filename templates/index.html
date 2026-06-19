@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <form action="/predict" method="POST">
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label>Location</label>
+            <select name="location" required>
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+                <option value="Suburban">Suburban</option>
+            </select>
+
+            <label>Contract Type</label>
+            <select name="contract_type" required>
+                <option value="Month-to-Month">Month-to-Month</option>
+                <option value="One Year">One Year</option>
+                <option value="Two Year">Two Year</option>
+            </select>
+
+            <label>Monthly Charges</label>
+            <input type="number" step="0.01" name="monthly_charges" required>
+
+            <label>Total Charges</label>
+            <input type="number" step="0.01" name="total_charges" required>
+
+            <label>Data Usage (GB)</label>
+            <input type="number" step="0.01" name="data_usage_gb" required>
+
+            <label>Call Minutes</label>
+            <input type="number" name="call_minutes" required>
+
+            <label>Number of Complaints</label>
+            <input type="number" name="num_complaints" required>
+
+            <label>Issues Resolved</label>
+            <input type="number" name="issues_resolved" required>
+
+            <label>Satisfaction Score (1-4)</label>
+            <input type="number" name="satisfaction_score" min="1" max="4" required>
+
+            <button type="submit">Predict Churn</button>
+        </form>
+    </div>
+</body>
+</html>
